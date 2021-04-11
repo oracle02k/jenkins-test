@@ -1,3 +1,5 @@
 node {
-  echo 'My first Jenkinsfile'
+  docker.image('alpine:latest').inside {
+    sh 'echo Hello Docker!'
+  }
 }
